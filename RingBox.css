@@ -298,6 +298,12 @@ div {
     color: skyblue;
 }
 
+@media (max-width: 440px) {
+    #Msg { /* 모바일 */
+        font-size: 15px;
+    }
+}
+
 #MsgClear { /* 알림창 초기화 */
     font-family: Jua;
     border: 1px solid black;
