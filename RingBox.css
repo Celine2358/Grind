@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@100..900&display=swap');
+
+body {
+    background-color: #303030;
+}
+
+div {
+    font-family: Jua;
+}
+
+.Title { /* 상단 메뉴 */
+    display: flex;
+    color: #e9e8e8;
+    border-bottom: 1px solid #606060;
+}
+
+#Title1 { /* 시드링 시뮬레이터 */
+    display: flex;
+    width: 260px; height: 40px;
+    margin: 0px 0px 5px 320px;
+    font-size: 23px;
+    line-height: 0px;
+}
+@media (max-width: 440px) {
+    #Title1 { /* 모바일 */
+        margin: 0 auto;
+        width: 100%; height: 100%;
+    }
+    #Sim {
+        display: none;
+    }
+}
+
+#Title2, #Title3 { /* 연마석, 반지상자 */
+    display: flex;
+    width: 110px; height: 35px;
+    font-size: 20px;
+    line-height: 5px;
+    margin-right: 15px;
+    margin-top: 1px;
+}
+#Title2 { 
+    cursor: pointer;
+}
+#Title3 { /* 반지상자 시뮬 선택 */
+    color: white;
+}
+
+#Title4 { /* 셀리느 */
+    display: flex;
+    border: 2px solid #C0C0C0;
+    width: 120px; height: 30px;
+    font-size: 18px;
+    line-height: 0px;
+    text-align: center;
+    padding: 4px; margin: 0px 0px 5px 630px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px #C0C0C0;
+    cursor: pointer; /* 포인터 */
+}
+@media (max-width: 440px) {
+    #Title2, #Title3, #Title4 { /* 모바일 */
+        margin: 0 auto;
+        width: 100%; height: 100%;
+        font-size: 80%;
+    }
+}
+
+#RingBoxTitle { /* 반지 상자 시뮬레이터 */
+    margin: 0 auto;
+    border-radius: 15px;
+    border: 2px solid white;
+    width: 300px; height: 50px;
+    font-size: 24px; color: white;
+    text-align: center;
+    line-height: 50px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px white;
+}
+
+/* 반지 상자 UI 부분 */
+#BoxSelect1 { /* 녹옥 상자 선택 */
+    border: 1px solid lightgreen;
+    display: block;
+    margin: 0 auto;
+    margin-top: 18px;
+    padding: 1px;
+    width: 360px; height: 35px;
+    font-size: 20px; color: lightgreen;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 10px;
+    box-shadow: 0 0 6px lightgreen;
+    cursor: pointer;
+}
+#BoxSelect2 { /* 홍옥 상자 선택 */
+    border: 1px solid red;
+    display: none;
+    margin: 0 auto;
+    margin-top: 18px;
+    padding: 1px;
+    width: 360px; height: 35px;
+    font-size: 20px; color: red;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 10px;
+    box-shadow: 0 0 6px red;
+    cursor: pointer;
+}
+#BoxSelect3 { /* 흑옥 상자 선택 */
+    border: 1px solid gray;
+    display: none;
+    margin: 0 auto;
+    margin-top: 18px;
+    padding: 1px;
+    width: 360px; height: 35px;
+    font-size: 20px; color: gray;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 10px;
+    box-shadow: 0 0 6px gray;
+    cursor: pointer;
+}
+#BoxSelect4 { /* 백옥 상자 선택 */
+    border: 1px solid yellow;
+    display: none;
+    margin: 0 auto;
+    margin-top: 18px;
+    padding: 1px;
+    width: 360px; height: 35px;
+    font-size: 20px; color: yellow;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px yellow;
+    cursor: pointer;
+}
+#BoxSelect5 { /* 타워인헨스 상자 선택 */
+    border: 1px solid skyblue;
+    display: none;
+    margin: 0 auto;
+    margin-top: 18px;
+    padding: 1px;
+    width: 360px; height: 35px;
+    font-size: 20px; color: skyblue;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 10px;
+    box-shadow: 0 0 6px skyblue;
+    cursor: pointer;
+}
+
+.BoxUI { /* 반지 상자 UI */
+    display: flex;
+    margin: 0 auto;
+    margin-top: 24px;
+}
+#BoxUI { /* 반지 상자 */
+    border: 2px solid lightgreen;
+    margin: 0 auto;
+    width: 440px; height: 300px;
+    box-shadow: 0 0 10px lightgreen;
+    display: flex;
+    align-items: center; /* 수직 정렬 */
+    justify-content: center; /* 수평 정렬 */
+}
+#RingBoxdiv1 { /* 녹옥 반지 상자 이미지 31x27 */
+    margin: 0 auto;
+    display: block;
+    width: 155px; height: 135px;
+    cursor: pointer;
+}
+#RingBoxdiv2 { /* 홍옥 반지 상자 이미지 31x27 */
+    margin: 0 auto;
+    display: none;
+    width: 155px; height: 135px;
+    cursor: pointer;
+}
+#RingBoxdiv3 { /* 흑옥 반지 상자 이미지 31x27 */
+    margin: 0 auto;
+    display: none;
+    width: 155px; height: 135px;
+    cursor: pointer;
+}
+#RingBoxdiv4 { /* 백옥 반지 상자 이미지 31x27 */
+    margin: 0 auto;
+    display: none;
+    width: 155px; height: 135px;
+    cursor: pointer;
+}
+#RingBoxdiv5 { /* 타워인헨스 박스 이미지 31x27 */
+    margin: 0 auto;
+    display: none;
+    width: 155px; height: 135px;
+    cursor: pointer;
+}
+#RingBoxImg1, #RingBoxImg2, #RingBoxImg3, #RingBoxImg4, #RingBoxImg5 {
+    width: 100%; height: 100%;
+}
+#Effect { /* 좋은 반지가 나왔을 때 이펙트 */
+    position: absolute;
+    display: none;
+    margin: 0 auto;
+    width: 155px; height: 135px;
+}
+#EffectGif { /* 이펙트.gif */
+    position: absolute;
+    margin: 0 auto;
+    width: 155px; height: 135px;
+}
+
+#Tip1, #Tip2, #Tip3, #Tip4, #Tip5 {
+    display: none;
+    position: absolute;
+}
+#RingBoxImg1:hover + #Tip1,
+#RingBoxImg2:hover + #Tip2,
+#RingBoxImg3:hover + #Tip3,
+#RingBoxImg4:hover + #Tip4,
+#RingBoxImg5:hover + #Tip5 {
+    display: block;
+}
+
+#Total1 /* 녹옥 반지 획득 통계 */ {
+    position: absolute;
+    display: block;
+    margin: 0 auto;
+    left: 65%;
+    width: 200px; height: 300px;
+    font-size: 20px; color: white;
+}
+
+.BoxTotal1, .Lv3TotalA, .Lv3TotalB, #EtcTotal1 {
+    display: flex;
+    margin-top: 10px;
+}
+
+#Total2 /* 홍옥, 흑옥, 백옥 반지 획득 통계 */ {
+    position: absolute;
+    display: none;
+    margin: 0 auto;
+    left: 65%;
+    width: 200px; height: 300px;
+    font-size: 20px; color: white;
+}
+
+.BoxTotal2, .Lv4TotalA, .Lv4TotalB, .Lv4TotalC, .Lv4TotalD, .Lv4TotalE, #EtcTotal2 {
+    display: flex;
+    margin-top: 10px;
+}
+
+#Total3 /* 타워인헨스 반지 획득 통계 */ {
+    position: absolute;
+    display: none;
+    margin: 0 auto;
+    left: 65%;
+    width: 200px; height: 300px;
+    font-size: 20px; color: white;
+}
+
+.BoxTotal3, .Lv4Tower, #EtcTotal3 {
+    display: flex;
+    margin-top: 10px;
+}
+@media (max-width: 440px) {
+    #Total1, #Total2, #Total3 { /* 모바일 */
+        left: 75%;
+    }
+}
+
+.Msg {
+    display: flex;
+    margin-top: 25px;
+}
+
+#Msg { /* 알림판 */
+    border: 2px solid black;
+    background-color: white;
+    margin: 0 auto;
+    width: 620px; height: 280px;
+    border-radius: 10px;
+    font-size: 18px;
+    overflow-y: auto;
+    scroll-behavior: smooth; /* 스크롤을 부드럽게 이동하도록 설정 */
+}
+
+#A {
+    color: green;
+}
+#B {
+    color: crimson;
+}
+#C {
+    color: goldenrod;
+}
+#D {
+    color: skyblue;
+}
+
+#MsgClear { /* 알림창 초기화 */
+    font-family: Jua;
+    border: 1px solid black;
+    position: absolute;
+    left: 67%;
+    width: 80px; height: 35px;
+    border-radius: 7px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 35px;
+}
+@media (max-width: 440px) {
+    #MsgClear { /* 모바일 */
+        left: 100%;
+    }
+}

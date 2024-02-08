@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@100..900&display=swap');
+
+body {
+    background-color: #303030;
+}
+
+div {
+    font-family: Jua;
+}
+
+.Title { /* 상단 메뉴 */
+    display: flex;
+    color: #e9e8e8;
+    border-bottom: 1px solid #606060;
+}
+
+#Title1 { /* 시드링 시뮬레이터 */
+    display: flex;
+    width: 260px; height: 40px;
+    margin: 0px 0px 5px 320px;
+    font-size: 23px;
+    line-height: 0px;
+}
+@media (max-width: 440px) {
+    #Title1 { /* 모바일 */
+        margin: 0 auto;
+        width: 100%; height: 100%;
+    }
+    #Sim {
+        display: none;
+    }
+}
+
+#Title2, #Title3 { /* 연마석, 반지상자 */
+    display: flex;
+    width: 110px; height: 35px;
+    font-size: 20px;
+    line-height: 5px;
+    margin-right: 15px;
+    margin-top: 1px;
+}
+#Title2 { /* 연마석 시뮬 선택 */
+    color: white;
+}
+#Title3 {
+    cursor: pointer;
+}
+
+#Title4 { /* 셀리느 */
+    display: flex;
+    border: 2px solid #C0C0C0;
+    width: 120px; height: 30px;
+    font-size: 18px;
+    line-height: 0px;
+    text-align: center;
+    padding: 4px; margin: 0px 0px 5px 630px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px #C0C0C0;
+    cursor: pointer; /* 포인터 */
+}
+@media (max-width: 440px) {
+    #Title2, #Title3, #Title4 { /* 모바일 */
+        margin: 0 auto;
+        width: 100%; height: 100%;
+        font-size: 80%;
+    }
+}
+
+#GrindTitle { /* 생명의 연마석 시뮬레이터 */
+    margin: 0 auto;
+    border-radius: 15px;
+    border: 2px solid white;
+    width: 300px; height: 50px;
+    font-size: 24px; color: white;
+    text-align: center;
+    line-height: 50px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px white;
+}
+
+.Grind {
+    display: flex;
+    margin-top: 25px;
+}
+
+#Grind { /* 생명의 연마석 UI 이미지 */
+    margin: 0px 0px 0px 125px;
+    width: 534px; height: 361px;
+}
+
+#GrindUI { /* 생명의 연마석 UI */
+    float: center;
+}
+
+/* Inventory 표 부분 */
+#Inv {
+    border: 1px solid white;
+    width: 120px; height: 30px;
+    font-size: 20px; color: white;
+    text-align: center;
+    line-height: 30px;
+    margin: 0px 0px 0px 420px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px white;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 15px 0px 0px 404px;
+}
+
+th, td {
+    width: 48px; height: 48px;
+    padding: 1px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 6px white;
+}
+
+/* 시드링 툴팁 부분 */
+#Ring1, #Ring2, #Ring3, #Ring4, #Ring5,
+#Ring6, #Ring7, #Ring8, #Ring9 {
+    cursor: pointer;
+}
+
+#ToolTip1, #ToolTip2, #ToolTip3, #ToolTip4, #ToolTip5,
+#ToolTip6, #ToolTip7, #ToolTip8, #ToolTip9 {
+    display: none;
+    position: absolute;
+}
+
+#R1:hover #ToolTip1, /* th 부분 */
+#R2:hover #ToolTip2,
+#R3:hover #ToolTip3 {
+    display: block;
+}
+#R4:hover #ToolTip4, /* td 부분 */
+#R5:hover #ToolTip5,
+#R6:hover #ToolTip6,
+#R7:hover #ToolTip7,
+#R8:hover #ToolTip8,
+#R9:hover #ToolTip9 {
+    display: block;
+}
+
+/* 연마석 UI 강화 부분 */
+#Ring {
+    position: absolute;
+    width: 66px; height: 66px;
+    margin: 110px 0px 0px 46px;
+}
+
+#Result {
+    position: absolute;
+    width: 66px; height: 66px;
+    margin: 110px 0px 0px 420px;
+}
+
+#RingLv {
+    position: absolute;
+    width: 50px; height: 20px;
+    margin: 184px 0px 0px 55px;
+    color: white;
+    text-align: center;
+}
+
+#GrindNum {
+    position: absolute;
+    width: 50px; height: 20px;
+    margin: 184px 0px 0px 241px;
+    color: white;
+    text-align: center;
+}
+
+#ResultLv {
+    position: absolute;
+    width: 50px; height: 20px;
+    margin: 184px 0px 0px 428px;
+    color: white;
+    text-align: center;
+}
+
+#Minus {
+    position: absolute;
+    width: 26px; height: 26px;
+    margin: 219px 0px 0px 203px;
+    cursor: pointer;
+}
+
+#Plus {
+    position: absolute;
+    width: 26px; height: 26px;
+    margin: 219px 0px 0px 233px;
+    cursor: pointer;
+}
+
+#MAX {
+    position: absolute;
+    width: 59px; height: 26px;
+    margin: 219px 0px 0px 268px;
+    cursor: pointer;
+}
+
+#Chance {
+    position: absolute;
+    width: 62px; height: 21px;
+    margin: 268px 0px 0px 193px;
+    text-align: right;
+    color: white;
+}
+
+#Meso {
+    position: absolute;
+    width: 120px; height: 21px;
+    margin: 268px 0px 0px 295px;
+    text-align: right;
+    color: white;
+}
+
+#Enchant {
+    position: absolute;
+    width: 95px; height: 26px;
+    margin: 310px 0px 0px 165px;
+    cursor: pointer;
+}
+
+#Cancle {
+    position: absolute;
+    width: 95px; height: 26px;
+    margin: 310px 0px 0px 273px;
+    cursor: pointer;
+}
+
+#RingA, #RingB {
+    width: 100%; height: 100%;
+    margin: 0 auto;
+}
+
+#Effect { /* 성공 실패 이펙트 */
+    position: absolute;
+    width: 757px; height: 288px;
+    margin: 36px 0px 0px 560px;
+}
+
+/* 통계 */
+#Board {
+    position: absolute;
+    width: 320px; height: 300px;
+    font-size: 20px; color: white;
+    text-align: left;
+    line-height: 30px;
+    margin: 30px 0px 0px 1300px;
+}
+
+.G, .MesoSum {
+    display: flex;
+}
+
+#Reset {
+    font-family: Jua;
+    width: 70px; height: 40px;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+/* 메세지 알림창 부분 */
+#Msg {
+    border: 2px solid black;
+    background-color: white;
+    margin: 0 auto; margin-top: 25px;
+    width: 620px; height: 280px;
+    border-radius: 10px;
+    font-size: 18px;
+    overflow-y: auto;
+    scroll-behavior: smooth; /* 스크롤을 부드럽게 이동하도록 설정 */
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="Grinding.png">
+    <title>
+        시드링 시뮬레이터
+    </title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="RingGrinding.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--모바일 화면-->
+</head>
+<body>
+    <div class="Title">
+        <div id="Title1">
+            <img id="icon1" src="RestraintRing.png" alt="시드링">
+            <p id="Sim">시드링 시뮬레이터</p>
+        </div>
+        <div id="Title2">
+            <img src="Grinding.png" alt="연마석">
+            <p>연마석</p>
+        </div>
+        <div id="Title3" onclick="RingBoxLink()">
+            <img src="RingBox4.png" alt="반지상자">
+            <p>반지상자</p>
+        </div>
+        <div id="Title4" onclick="CelineLink()">
+            <img id="CelineIcon" src="Scania.png" alt="셀리느">
+            <p>제작 : 셀리느</p>
+        </div>
+    </div>
+    <div id="GrindTitle">
+        생명의 연마석 시뮬레이터
+    </div>
+    <div class="Grind">
+        <div id="Effect" onclick="soundtest()">
+            <img id="gifImage" src="empty.png">
+            <audio id="SuccessSound">
+                <source src="EnchantSuccess.mp3" type="audio/mp3">
+            </audio>
+            <audio id="FailSound">
+                <source src="EnchantFail.mp3" type="audio/mp3">
+            </audio>
+        </div>
+        <div id="Inventory">
+            <div id="Inv">인벤토리</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th id="R1">
+                            <img id="Ring1" src="RestraintRing4.png" onclick="Ring1()">
+                            <img id="ToolTip1" src="Ring1.png">
+                        </th>
+                        <th id="R2">
+                            <img id="Ring2" src="ContinuousRing4.png" onclick="Ring2()">
+                            <img id="ToolTip2" src="Ring2.png">
+                        </th>
+                        <th id="R3">
+                            <img id="Ring3" src="RiskTakerRing4.png" onclick="Ring3()">
+                            <img id="ToolTip3" src="Ring3.png">
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="R4">
+                            <img id="Ring4" src="WeaponRing4.png" onclick="Ring4()">
+                            <img id="ToolTip4" src="Ring4.png">
+                        </td>
+                        <td id="R5">
+                            <img id="Ring5" src="WeaponRing4.png" onclick="Ring5()">
+                            <img id="ToolTip5" src="Ring5.png">
+                        </td>
+                        <td id="R6">
+                            <img id="Ring6" src="WeaponRing4.png" onclick="Ring6()">
+                            <img id="ToolTip6" src="Ring6.png">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="R7">
+                            <img id="Ring7" src="WeaponRing4.png" onclick="Ring7()">
+                            <img id="ToolTip7" src="Ring7.png">
+                        </td>
+                        <td id="R8">
+                            <img id="Ring8" src="RingOfSum4.png" onclick="Ring8()">
+                            <img id="ToolTip8" src="Ring8.png">
+                        </td>
+                        <td id="R9">
+                            <img id="Ring9" src="CriticalDamageRing4.png" onclick="Ring9()">
+                            <img id="ToolTip9" src="Ring9.png">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="Grind">
+            <div id="Ring"><img id="RingA" src="empty.png"></div>
+            <div id="Result"><img id="RingB" src="empty.png"></div>
+            <div id="RingLv"></div>
+            <div id="GrindNum"></div>
+            <div id="ResultLv"></div>
+            <div id="Minus" onclick="GrindMinus()"></div>
+            <div id="Plus" onclick="GrindPlus()"></div>
+            <div id="MAX" onclick="GrindMAX()"></div>
+            <div id="Chance"></div>
+            <div id="Meso"></div>
+            <div id="Enchant" onclick="Enchant()"></div>
+            <div id="Cancle" onclick="Cancle()"></div>
+            <img id="GrindUI" src="GrindUI_Per.png" alt="생명의연마석">
+        </div>
+        <div id="Board">
+            <div class="G">
+                <img src="Grinding.png" alt="연마석"> 
+                <div id="G"> : 0</div>
+            </div>
+            <div class="MesoSum">
+                <img src="Meso.png" alt="메소">
+                <div id="MesoSum"> : 0</div>
+            </div>
+            <div id="Success">Success : 0</div>
+            <div id="Fail">Fail : 0</div>
+            <div id="Try">Try : 0</div>
+            <div><button id="Reset" onclick="Reset()">초기화</button></div>
+        </div>
+    </div>
+    <div id="Msg"><알림> 특수 스킬 반지와 연마석 수량을 결정하세요!</div>
+</body>
+<script src="RingGrinding.js">
+</script>
+</html>

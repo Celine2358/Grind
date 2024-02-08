@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="Grinding.png">
+    <title>
+        시드링 시뮬레이터
+    </title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="RingBox.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--모바일 화면-->
+</head>
+<body>
+    <div class="Title">
+        <div id="Title1">
+            <img id="icon1" src="RestraintRing.png" alt="시드링">
+            <p id="Sim">시드링 시뮬레이터</p>
+        </div>
+        <div id="Title2" onclick="GrindLink()">
+            <img src="Grinding.png" alt="연마석">
+            <p>연마석</p>
+        </div>
+        <div id="Title3">
+            <img src="RingBox4.png" alt="반지상자">
+            <p>반지상자</p>
+        </div>
+        <div id="Title4" onclick="CelineLink()">
+            <img id="CelineIcon" src="Scania.png" alt="셀리느">
+            <p>제작 : 셀리느</p>
+        </div>
+    </div>
+    <div id="RingBoxTitle">
+        반지 상자 시뮬레이터
+    </div>
+    <div id="BoxSelect1" onclick="BoxChange1()">
+        녹옥의 보스 반지 상자 (하급)
+    </div>
+    <div id="BoxSelect2" onclick="BoxChange2()">
+        홍옥의 보스 반지 상자 (중급)
+    </div>
+    <div id="BoxSelect3" onclick="BoxChange3()">
+        흑옥의 보스 반지 상자 (상급)
+    </div>
+    <div id="BoxSelect4" onclick="BoxChange4()">
+        백옥의 보스 반지 상자 (최상급)
+    </div>
+    <div id="BoxSelect5" onclick="BoxChange5()">
+        타워인헨스 링 박스
+    </div>
+    <div class="BoxUI">
+        <div id="BoxUI">
+            <div id="RingBoxdiv1" onclick="OpenBox1()">
+                <img id="RingBoxImg1" src="RingBox1.png" alt="반지상자">
+                <img id="Tip1" src="GreenBox.png">
+            </div>
+            <div id="RingBoxdiv2" onclick="OpenBox2()">
+                <img id="RingBoxImg2" src="RingBox2.png" alt="반지상자">
+                <img id="Tip2" src="RedBox.png">
+            </div>
+            <div id="RingBoxdiv3" onclick="OpenBox3()">
+                <img id="RingBoxImg3" src="RingBox3.png" alt="반지상자">
+                <img id="Tip3" src="BlackBox.png">
+            </div>
+            <div id="RingBoxdiv4" onclick="OpenBox4()">
+                <img id="RingBoxImg4" src="RingBox4.png" alt="반지상자">
+                <img id="Tip4" src="WhiteBox.png">
+            </div>
+            <div id="RingBoxdiv5" onclick="OpenBox5()">
+                <img id="RingBoxImg5" src="RingBox5.png" alt="반지상자">
+                <img id="Tip5" src="TowerBox.png">
+            </div>
+            <div id="Effect"> <!--좋은 반지 이펙트, 사운드-->
+                <img id="EffectGif" src="BoxEffect.gif">
+                <audio id="BestRing">
+                    <source src="BoxSound.mp3" type="audio/mp3">
+                </audio>
+            </div>
+        </div>
+        <div id="Total1"> <!--녹옥의 반지 상자 통계-->
+            <div class="BoxTotal1">
+                <img src="RingBox1.png">
+                <div id="BoxTotal1"> : 0</div>
+            </div>
+            <div class="Lv3TotalA">
+                <img src="RestraintRing3.png">
+                <div id="Lv3TotalA"> : 0</div>
+            </div>
+            <div class="Lv3TotalB">
+                <img src="ContinuousRing3.png">
+                <div id="Lv3TotalB"> : 0</div>
+            </div>
+            <div id="EtcTotal1">
+                기타 : 0
+            </div>
+        </div>
+        <div id="Total2"> <!--홍옥,흑옥,백옥의 반지 상자 통계-->
+            <div class="BoxTotal2">
+                <img id="BoxImg" src="RingBox2.png">
+                <div id="BoxTotal2"> : 0</div>
+            </div>
+            <div class="Lv4TotalA">
+                <img src="RestraintRing3.png">
+                <div id="Lv4TotalA"> : 0</div>
+            </div>
+            <div class="Lv4TotalB">
+                <img src="RestraintRing4.png">
+                <div id="Lv4TotalB"> : 0</div>
+            </div>
+            <div class="Lv4TotalC">
+                <img src="ContinuousRing4.png">
+                <div id="Lv4TotalC"> : 0</div>
+            </div>
+            <div class="Lv4TotalD">
+                <img src="WeaponRing4.png">
+                <div id="Lv4TotalD"> : 0</div>
+            </div>
+            <div class="Lv4TotalE">
+                <img src="RiskTakerRing4.png">
+                <div id="Lv4TotalE"> : 0</div>
+            </div>
+            <div id="EtcTotal2">
+                기타 : 0
+            </div>
+        </div>
+        <div id="Total3"> <!--타워인헨스 반지 상자 통계-->
+            <div class="BoxTotal3">
+                <img src="RingBox5.png">
+                <div id="BoxTotal3"> : 0</div>
+            </div>
+            <div class="Lv4Tower">
+                <img src="TowerInhanceRing4.png">
+                <div id="Lv4Tower"> : 0</div>
+            </div>
+            <div id="EtcTotal3">
+                기타 : 0
+            </div>
+        </div>
+    </div>
+    <div class="Msg">
+        <div id="Msg">
+            <알림> 반지 상자 시뮬레이터입니다. <span id="A">"녹옥의 보스 반지 상자"</span>를 클릭하면
+            <br><span id="B">홍옥</span> - 흑옥 - <span id="C">백옥</span> - <span id="D">타워인헨스</span>
+             순으로 상자를 변경할 수 있으며
+            <br>반지 상자를 클릭하면 확률에 따라 반지를 획득할 수 있습니다.
+        </div>
+        <button id="MsgClear" onclick="clearMsg()">CLEAR</button>
+    </div>
+</body>
+<script src="RingBox.js">
+</script>
+</html>
